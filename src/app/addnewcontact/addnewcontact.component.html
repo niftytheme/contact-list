@@ -1,0 +1,20 @@
+<form action="../../assets/json-data/contacts.json" method="POST">
+  <h2 class="form_title">Add a New Contact</h2>
+  <!-- input group -->
+  <div class="photo-g mb-3 text-center">
+    <label for="file-upload" class="custom-file-upload">
+      <i class="fa fa-user-circle"></i> Add Photo
+    </label>
+    <input id="file-upload" type="file"/>
+  </div>
+  <input class="form-control btn-lg mb-3" type="text" name="firstName" placeholder="First name" autocomplete="off" required>
+  <input class="form-control btn-lg mb-3" type="text" name="lastName" placeholder="Last name" autocomplete="off">
+  <div class="d-flex">
+    <input class="form-control btn-lg mb-3 max-num" type="text" name="mobileNumber" placeholder="0120 000 0000" autocomplete="off">
+  </div>
+  <input class="form-control btn-lg" type="email" name="email" placeholder="Email address" autocomplete="off">
+  <div class="btns text-center">
+    <button type="submit" class="btn btn-lg btn-success mb-1 mx-auto">Add Contact</button>
+    <button class="btn btn-lg btn-primary mx-auto" routerLink="">Cancel</button>
+  </div>  
+</form>

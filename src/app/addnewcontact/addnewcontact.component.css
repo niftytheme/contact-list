@@ -1,0 +1,38 @@
+form {
+  padding: 30px 20px;
+}
+form .form_title {
+  font-size: 22px;
+  color: #5a5a5a;
+  border-bottom: 2px solid #ced4da;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ced4da;
+  margin-bottom: 20px;
+}
+.custom-file-upload i {
+  display: block;
+  font-size: 100px;
+  color: #ced4da;
+  margin-bottom: 10px;
+}
+.btns {
+  margin-top: 20px;
+}
+input.min-num {
+  max-width: 90px;
+}
+button {
+  width: 190px;
+  text-align: center;
+  display: block;
+}

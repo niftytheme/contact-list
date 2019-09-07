@@ -1,0 +1,52 @@
+<!-- Search Form -->
+<form id="search_form" class="search_form">
+  <input id="myInput" type="search" class="text-left" placeholder="Search Contact">
+  <p>{{contacts}}</p>
+</form>
+<!-- add new contacts button -->
+<button class="add-btn d-flex align-items-center justify-content-between w-100" routerLink="add_new_contact">
+  <span>add new contacts</span>
+  <i class="fa fa-plus"></i>
+</button>
+<!-- list box -->
+<div class="list-box">
+  <div class="w-100">
+    <!-- title -->
+    <h5 class="mb-0 list-title">Latest Contact</h5>
+    <ul class="list latest-contacts list-unstyled mb-0">
+      <li class="d-flex align-items-center justify-content-start" *ngFor="let user of lastUsers | slice: -3">
+        <img src="{{user.image}}" class="img-fluid" alt="">
+        <div class="details">
+          <!-- name -->
+          <h6 class="name mb-0">{{user.firstName}}</h6>
+          <!-- email -->
+          <div class="email">{{user.email}}</div>
+        </div>
+      </li>
+    </ul>  
+    <ul class="list list-unstyled mb-0">
+      <ng-container *ngFor="let user of users">
+        <h5 class="mb-0 list-title" *ngIf="checkIfNew(user.firstName)" id="{{ user.firstName.charAt(0).toUpperCase() }}">{{ user.firstName.charAt(0).toUpperCase() }}</h5>
+        <li>
+          <div  class="d-flex align-items-center justify-content-start" (click)="selectuser(user.title)">
+            <img src="{{user.image || '' }}" class="img-fluid" alt="">
+            <div class="details">
+              <!-- name -->
+              <h6 class="name mb-0">{{user.firstName || '' + ' ' + user.lastName || ''}}</h6>
+              <!-- email -->
+              <div class="email">{{user.email || '' }}</div>
+            </div>
+          </div>
+        </li>
+      </ng-container>
+    </ul>    
+  </div>   
+  <!-- Alphabetical Scrollbar -->
+  <div class="mb-0 scrollbar">
+    <ul class="list-unstyled">
+      <li *ngFor="let char of scrollbarChar">
+        <a class="scroll_link" href="#{{char}}">{{char}}</a>
+      </li>
+    </ul>
+  </div>    
+</div>

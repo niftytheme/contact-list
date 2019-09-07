@@ -1,0 +1,119 @@
+/* search form */
+form.search_form {
+  position: relative;
+  padding: 15px 20px;
+  background: #f9f9f9;
+}
+form.search_form input {
+  position: relative;
+  width: 100%;
+  padding: 10px 20px 10px 40px;
+  border: 0;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  background: #e8e8ea url(../../assets/images/icons/search.svg) center no-repeat;
+  background-size: 16px;
+  background-position: 15px;
+}
+form.search_form input::placeholder {
+  opacity: 1;
+  color: #858585;
+}
+form.search_form input:focus::placeholder {
+  transform: scale(0)
+}
+/* add new contat button */
+button.add-btn {
+  background: #f2f2f2;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: bold;
+  outline: none;
+  padding: 10px 20px;
+  color: #5a5a5a;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+button.add-btn:active {
+  background: #d9d9d9;
+}
+/* list box */
+.list-box {
+  position: relative;
+  height: 600px;
+  overflow: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between
+}
+.list-box::-webkit-scrollbar {
+	width: 12px;
+	background-color: #ddd;
+}
+.list-box::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #bbbbbb;
+}
+.list-box .list-title {
+  background: #f2f2f2;
+  padding: 5px 20px;
+  font-size: 15px;
+  color: #333;
+  font-weight: bold;  
+}
+.list-box ul.list li {
+  padding: 7px 20px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.list-box ul.list li:hover {
+  background: #f9f9f9;
+}
+.list-box ul.list li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.list-box ul.list li img {
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  margin-right: 12px;
+  height: 56px;
+  width: 56px;
+  background: url(../../assets/images/contacts-pics/user.svg);
+}
+/* .list-box ul.list li .details {} */
+.list-box ul.list li .details .name {
+  color: #7d7d7d;
+  font-size: 18px;
+}
+.list-box ul.list li .details .email {
+  color: #bbbbbb;
+  font-size: 17px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 240px;
+}
+/* scrollbar */
+.list-box .scrollbar {
+  position: sticky;
+  top: 30px;
+  text-align: center;
+}
+.list-box .scrollbar ul {
+  position: absolute;
+  left: -20px;
+}
+.list-box .scrollbar ul li {
+  border: 0;
+  padding: 0;
+  line-height: 1.1
+}
+.list-box .scrollbar ul a {
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: bold;
+}
